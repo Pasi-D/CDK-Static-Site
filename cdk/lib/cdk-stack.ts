@@ -19,7 +19,7 @@ export class CdkStack extends Stack {
 
     // S3 Deployment
     new s3Deployment.BucketDeployment(this, 'CDKBlogDeployment', {
-      sources: [s3Deployment.Source.asset(path.resolve(__dirname, '../../blog/build'))],
+      sources: [s3Deployment.Source.asset(path.resolve(__dirname, '../../blog/public'))],
       destinationBucket: BlogBucket
     })
 
